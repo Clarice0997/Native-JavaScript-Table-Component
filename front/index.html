@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表格组件table</title>
+  <!-- CDN获取jquery -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <!-- 本地获取jquery -->
+  <script src="./JS/jquery-3.6.0.min.js"></script>
+  <!-- 导入封装表格拖拽方法 -->
+  <script src="./JS/colResizAble.js"></script>
+  <!-- 导入 Font Awesome4.70 图标UI库 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- 引入css默认样式 -->
+  <link rel="stylesheet" href="./css/public.css">
+  <!-- 导入css外部样式表 -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- 导入css表格外部样式表 -->
+  <link rel="stylesheet" href="./css/table.css">
+  <!-- 引入loading样式 -->
+  <link rel="stylesheet" href="./css/loading.css">
+</head>
+
+<body>
+  <!-- 组件容器 -->
+  <div class="container">
+    <!-- 头部容器 -->
+    <div class="header">
+      <!-- 左侧容器 -->
+      <div class="leftContainer">
+        <!-- 开机按钮 -->
+        <button name="on">
+          <i class="fa fa-play-circle"></i>
+          <span>开机</span>
+        </button>
+        <!-- 关机按钮 -->
+        <button name="off">
+          <i class="fa fa-power-off"></i>
+          <span>关机</span>
+        </button>
+        <!-- 重启按钮 -->
+        <button name="restart">
+          <i class="fa fa-refresh"></i>
+          <span>重启</span>
+        </button>
+        <!-- 更多按钮 -->
+        <button name="more">
+          <span>更多</span>
+          <i class="fa fa-chevron-down"></i>
+        </button>
+      </div>
+      <div class="rightContainer" style="display: none;"></div>
+    </div>
+    <!-- 表格容器 -->
+    <div class="tableContainer">
+      <!-- loading 默认隐藏 -->
+      <div class="load">
+        <div class="loader"></div>
+      </div>
+      <!-- 预览线 -->
+      <div class="table-line"></div>
+      <!-- 表格容器 -->
+      <table>
+        <!-- 表头 -->
+        <thead>
+          <tr>
+            <th class="selectAll"><input type="checkbox"></th>
+            <th style="width:10%">编号<span class="resize-line"></span></th>
+            <th style="width:20%">标题<span class="resize-line"></span></th>
+            <th style="width:10%">状态<span class="resize-line"></span></th>
+            <th style="width:15%">用户名<span class="resize-line"></span></th>
+            <th style="width:15%">日期</th>
+            <th style="width:26%">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td class="select"><input type="checkbox"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <div class='methods'>
+                <a href='javascript:void(0)'>修改</a>
+                <div></div><a href='javascript:void(0)'>复制</a>
+                <div></div><a href='javascript:void(0)'>删除</a>
+              </div>
+            </td>
+          </tr> -->
+        </tbody>
+      </table>
+      <!-- empty容器 默认隐藏 -->
+      <div class="empty">
+        <img src="./img/empty.png">
+        <p>暂无数据</p>
+      </div>
+    </div>
+    <!-- 分页容器 -->
+    <div class="pageContainer">
+      <!-- 页面显示条数 -->
+      <!-- <div class="pageCountC">
+        <select id="pageCount">
+          <option value="10">10条/页</option>
+          <option value="15">15条/页</option>
+          <option value="20">20条/页</option>
+          <option value="25">25条/页</option>
+        </select>
+      </div> -->
+      <!-- 页面跳转 -->
+      <!-- <div class="pageJump">
+        <i class="fa fa-caret-square-o-left fa-lg"></i>
+        <div class="pageJumpC">
+          <div class="pageSelect">1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div class="pageMore">...</div>
+          <div>9</div>
+        </div>
+        <i class="fa fa-caret-square-o-right fa-lg"></i>
+        <span>跳至</span>
+        <input type="text" class="pageInputJump" value="1">
+        <span>页</span>
+      </div> -->
+      <!-- 页面数据 -->
+      <!-- <div class="pageNum">
+        <span>?-?页 &nbsp;&nbsp;共?项</span>
+      </div> -->
+    </div>
+  </div>
+  <!-- 引入表格操作js -->
+  <script src="./JS/table.js"></script>
+  <!-- 引入外部js -->
+  <script src="./JS/script.js"></script>
+  <!-- 引入AjaxJS -->
+  <script src="./JS/network.js"></script>
+</body>
+
+</html>

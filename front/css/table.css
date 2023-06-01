@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+.tableContainer {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+}
+
+.tableContainer .table-line {
+  position: absolute;
+  width: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: none;
+  border-right: 1px dashed #d5d5d5;
+}
+
+.tableContainer table {
+  resize: both;
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  word-break: break-all;
+  font-size: 12px;
+  text-align: center;
+}
+
+.tableContainer table th {
+  position: relative;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #f1f5fb;
+}
+
+.tableContainer table th .resize-line {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  right: -1px;
+  cursor: col-resize;
+  height: 100%;
+}
+
+.tableContainer table th,
+.tableContainer table td {
+  padding: 8px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.tableContainer table td img {
+  width: 20%;
+}
+
+.tableContainer table tbody tr:nth-child(even) {
+  background-color: #f8f9fd;
+}
+
+.tableContainer table tbody tr {
+  transition: .2s;
+}
+
+.tableContainer table tbody tr:hover {
+  background-color: #ebeffb;
+}
+
+.select, .selectAll {
+  width: 4%;
+}
+
+.methods {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.methods div {
+  content: '';
+  background-color: #ececec;
+  width: 1px;
+}
+
+.methods a {
+  color: #5e6dd0;
+}
+
+.empty {
+  width: 20%;
+  margin: 50px auto;
+  text-align: center;
+  display: none;
+}
+
+.empty img {
+  width: 30%;
+}
+
+.empty p {
+  color: #dbdbdb;
+  margin: 5px;
+}
+
+.selectStyle {
+  /* even冲突 */
+  background-color: #faebec !important;
+}

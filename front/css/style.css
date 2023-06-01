@@ -1,0 +1,117 @@
+* {
+  list-style: none;
+}
+
+.container {
+  width: 80%;
+  margin: 100px auto;
+  min-width: 800px;
+}
+
+.header {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.leftContainer {
+  display: flex;
+  width: 35%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftContainer button {
+  height: 80%;
+  width: 24%;
+  background-color: #fafcfd;
+  transition: .2s;
+  color: #565859;
+  border-radius: 5px;
+  border: 1px solid #e3e5e6;
+}
+
+.leftContainer button:hover {
+  background-color: #d63a38;
+  color: white;
+  cursor: pointer;
+}
+
+.rightContainer {
+  display: flex;
+  width: 20%;
+  background-color: gray;
+}
+
+.pageContainer {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  color: #48474b;
+  user-select: none;
+}
+
+.pageContainer div {
+  display: inline-block;
+  margin: auto 10px;
+  width: auto;
+}
+
+.pageJump i {
+  cursor: pointer;
+  transition: .2s;
+}
+
+.pageJump span {
+  margin: auto 10px;
+}
+
+.pageJump i:hover {
+  color: red;
+}
+
+.pageJump input {
+  height: 25px;
+  width: 50px;
+  border: 1px solid #48474b;
+  border-radius: 5px;
+  text-align: center;
+  color: #48474b;
+}
+
+.pageJumpC div {
+  margin: auto 2px;
+  width: auto;
+  min-width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 22px;
+  color: #48474b;
+  cursor: pointer;
+}
+
+.pageSelect {
+  color: red !important;
+  border: 1px solid red;
+  border-radius: 3px;
+}
+
+.pageMore {
+  color: #48474b !important;
+  border: 1px solid rgba(255, 255, 255, 0) !important;
+  border-radius: 3px;
+}
+
+#pageCount {
+  height: 25px;
+  width: 80px;
+  border: 1px solid #48474b;
+  border-radius: 5px;
+  text-align: center;
+  color: #48474b;
+}
